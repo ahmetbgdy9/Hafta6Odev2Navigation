@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/fragmentBir">
+
+    <fragment
+        android:id="@+id/fragmentBir"
+        android:name="com.ahmetbugday.Hafta6Odev2.FragmentBir"
+        android:label="fragment_bir"
+        tools:layout="@layout/fragment_bir" >
+        <action
+            android:id="@+id/ikinciSayfayaGecis"
+            app:destination="@id/fragmentIki" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentIki"
+        android:name="com.ahmetbugday.Hafta6Odev2.FragmentIki"
+        android:label="fragment_iki"
+        tools:layout="@layout/fragment_iki" >
+        <action
+            android:id="@+id/UcuncuSayfayaGecis"
+            app:destination="@id/fragmentUc"
+            app:popUpTo="@id/fragmentIki"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUc"
+        android:name="com.ahmetbugday.Hafta6Odev2.FragmentUc"
+        android:label="fragment_uc"
+        tools:layout="@layout/fragment_uc" />
+</navigation>
